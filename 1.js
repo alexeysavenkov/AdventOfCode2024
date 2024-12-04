@@ -9,7 +9,7 @@ var input = `3   4
 
 var processedInput = input.split('\n').map(x => x.split('  '))
 
-var sortedList1 = processedInput.map(x => parseInt(x[0]))
+var sortedList1 = processedInput.map(x => parseInt(x[0])).toSorted()
 var sortedList2 = processedInput.map(x => parseInt(x[1])).toSorted()
 
 console.assert(sortedList1.length == sortedList2.length)
