@@ -52,6 +52,7 @@ while True:
 
     if next_location in obstruction_locations:
         guard_direction = direction_iteration[guard_direction]
+        visited_locations.add( (guard_location, guard_direction) )
         continue
 
     guard_location = next_location
@@ -85,6 +86,7 @@ def check_if_obstruction_creates_loop(obstruction_location):
 
         if next_location in obstruction_locations or next_location == obstruction_location:
             guard_direction = direction_iteration[guard_direction]
+            visited_locations_2.add( (guard_location, guard_direction) )
             continue
 
         guard_location = next_location
